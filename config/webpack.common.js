@@ -6,7 +6,7 @@ module.exports = {
    *
    * The first place Webpack looks to start building the bundle.
    */
-  entry: [paths.src + '/CSB.js'],
+  entry: [paths.src + '/CSB.ts'],
 
   /**
    * Output
@@ -31,9 +31,9 @@ module.exports = {
        * Use Babel to transpile JavaScript files.
        */
       {
-        test: /\.js$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader']
+        use: ['babel-loader', 'eslint-loader','ts-loader']
       }
     ]
   }
